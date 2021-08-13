@@ -297,11 +297,19 @@ Use lotsOfArt to do the following:
 
 For example lotsOfArt(artists); will return ["Amedeo Modigliani", "Rene Magritte", ... "Albrecht Dürer"]*/
 
-function lotsOfArt(array, string) {
-  return `${array[string].name}`;
-}
+function lotsOfArt(array, number) {
+  let fliteredArray = [];
+  for(let i = 0; i < array.length; i++){
+    if(array[i].includes(number)){
+      fliteredArray.push(array[i]);
+      }
+    }
+    return fliteredArray;
+  }
 
-console.log('task 7', lotsOfArt(artists, 'paintings: 100'))
+
+
+console.log('task 7', lotsOfArt(artists, 100))
 
 /* ***** END OF TASKS ***** */
 
